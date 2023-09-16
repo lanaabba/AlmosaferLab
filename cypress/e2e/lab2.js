@@ -21,7 +21,7 @@ Cypress.on("uncaught:exception", (err, runnable) => {
         .eq(0)
         .click();
         cy.get('.sc-1vkdpp9-5').click()
-        cy.wait(150000);
+        cy.wait(15000);
         cy.get('[data-testid="HotelSearchResult__sort__LOWEST_PRICE"]').click();
         cy.get('.Price__Value').first().invoke('text').then((firstPrice) => {
           cy.get('.Price__Value').last().invoke('text').then((lastPrice) => {
